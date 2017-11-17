@@ -8,6 +8,10 @@ import { Link } from 'react-router-dom';
 
 import './Header.css';
 
+/*CHILD COMPONENTS*/
+import PostAccount from './PostAccount/PostAccount';
+import UserGuest from './UserGuest/UserGuest';
+
 class Header extends Component {
 
   constructor(props) {
@@ -15,45 +19,13 @@ class Header extends Component {
   }
 
   render() {
-    
+    console.log('Header render');
+
     return (
       <div className="Header">
-
-        <div className="Login-reg">
-          <ul>
-            <li><Link to={'/'}>Home</Link></li>
-            <li><Link to={'/all'}>All Items</Link></li>
-
-            <li>Welcome {localStorage.getItem('username')}</li>
-            {!(this.props.user.logged_in) && localStorage.getItem('logged_in') !== 'true' ?
-            <div>
-            <li><a href="#" onClick={this.showRegister.bind(this)}>Register</a></li>
-            {this.state.showRegister === true ?
-            <NewUser />
-            : null}
-
-            <li><a href="#" onClick={this.showLogin.bind(this)}>Login</a></li>
-            {this.state.showLogin === true ?
-            <li><LoginUser /></li>
-            : null}
-            </div>
-            : null}
-
-
-            {this.props.user.logged_in === true || localStorage.getItem('logged_in') === 'true' ?
-            <div>
-              <li><Link to={`/users/${localStorage.getItem('user_id')}/edit`}>Settings</Link></li>
-              <li><Link to={`/users/${localStorage.getItem('user_id')}/items`}>My Items</Link></li>
-              <li><Logout handler={this.handleLogout.bind(this)}/> </li>
-            </div>
-            : null }
-
-          </ul>
-        </div>
-
-
-        <div className="banner"><img src='/banner.jpg' alt='' /></div>
-
+        <PostAccount />
+        <UserGuest />
+        <div className="Banner"><img src='/banner.jpg' alt='' /></div>
       </div>
     );
 

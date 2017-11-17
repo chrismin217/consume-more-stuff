@@ -17,22 +17,29 @@ class App extends Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      initialItems : this.props.loadInitialItems()
+    };
   }
 
-  getInitialState() {
-    this.props.loadInitialItems();
+  shouldComponentUpdate(nextProps, nextState) {
+    return false;
   }
 
   render() {
     console.log('App render');
+    console.log(this.state);
     return (
-      <Header />
-      <Board />
-      <Footer />
+      <div className="App">
+        <Header />
+        <Board />
+        <Footer />
+      </div>
     );
   }
 
 }
+//end class
 
 const mapStateToProps = (state) => {
   return {

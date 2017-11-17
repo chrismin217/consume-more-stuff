@@ -1,3 +1,23 @@
+.Header {
+  background-color: red;
+  position: relative;
+}
+
+.PostAccount {
+  border: 1px solid black;
+  position: absolute; 
+  right: 0;
+}
+
+.UserGuest {
+  border: 1px solid black;
+  position: absolute;
+  left: 0;
+}
+
+
+
+
 .Login-reg {
   border: 1px solid green;
   width: 25%;

@@ -17,15 +17,8 @@ import reducers from './reducers/reducer_index';
 
 /*COMPONENTS FOR ROUTES*/
 import App from './containers/App/App';
-import NewItemForm from './containers/NewItem/newItemForm';
-import LoginUser from './containers/Login';
-import AuthUserEditItem from './containers/AuthUserEditItem';
-import MyItems from './containers/MyItems';
-import UserSettings from './containers/UserSettings';
-import CategoryView from './containers/CategoryView';
-import AllItems from './containers/AllItems';
 
-import Goodbye from './components/Goodbye';
+import UserSettings from './containers/UserSettings';
 
 const store = createStore(
   reducers,
@@ -39,14 +32,6 @@ ReactDOM.render(
     <Router>
       <div>
         <Route exact path='/' component={App}/>
-        <Route path='/all' component={AllItems} />
-        <Route path='/items/:id' component={AuthUserEditItem}/>
-        <Route path='/new' component={NewItemForm}/>
-        <Route path='/users/:id/items' component={MyItems}/>
-        <Route path='/login' component={LoginUser} />
-        <Route path='/users/:id/edit' component={UserSettings}/>
-        <Route path='/categories/:id/items' component={CategoryView} />
-        <Route path='/logout' component={Goodbye} />
       </div>
     </Router>
   </Provider>,

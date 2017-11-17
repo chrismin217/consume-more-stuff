@@ -7,6 +7,10 @@ import './Board.css';
 
 /*ACTIONS*/
 
+/*CHILD COMPONENTS*/
+import Filter from './Filter/Filter';
+import Grid from './Grid/Grid';
+
 class Board extends Component {
 
   constructor(props) {
@@ -22,6 +26,8 @@ class Board extends Component {
     return (
       <div className="Board">
         <h1>Board</h1>
+        <Filter />
+        <Grid />
       </div>
     );
   }

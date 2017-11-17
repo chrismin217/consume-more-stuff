@@ -15,9 +15,7 @@ const user = (state = initialState, action) => {
       localStorage.setItem('username', action.user.username);
       let test = localStorage.getItem('logged_in');
 
-
       return Object.assign({}, state, {user_id: action.user.id, logged_in: true, username: action.user.username})
-
 
     case LOGOUT_USER:
       localStorage.setItem('user_id', 0);
