@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import Item from '../../components/item';
+import DetailItem from '../../components/detailItem';
 import { connect } from 'react-redux';
 import Header from '../Header/Header';
 import { loadItem } from '../../actions/items';
 import { loadConditions } from '../../actions/conditions';
 import { loadCategories } from '../../actions/categories';
 import { editItem, deleteItem } from '../../actions/items';
+
+import './AuthUserEditItem.css';
 
 import Select from '../../components/select';
 
@@ -131,12 +133,11 @@ class AuthUserEditItem extends Component {
   }
 
   render(){
-    console.log('PROPS', this.props)
-    console.log('STATE', this.state)
+    
     return (
-      <div>
+      <div className="AuthUserEditItem">
         <Header />
-        <Item
+        <DetailItem
           name={this.props.item.name}
           image={this.props.item.file}
           body={this.props.item.body}
@@ -146,7 +147,6 @@ class AuthUserEditItem extends Component {
           updatedAt={this.props.item.updatedAt}
           id={this.props.item.id}
           user_id={this.props.item.user_id}
-          detailView='yes'
           status={this.props.item.Status.type}
         />
 

@@ -1,76 +1,24 @@
-/*HEADER COMPONENT WITH LOGIN AND REGISTER*/
-/*HEADER COMPONENT WITH LOGIN AND REGISTER*/
-/*HEADER COMPONENT WITH LOGIN AND REGISTER*/
+/* This is the HEADER component. It is primarily responsible for 'Post', 'Account', as well as 'Login', 'Logout', and 'Register.' */
+
+/* It contains two child components: UserGuest and PostAccount */
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import logo from '../App/logo.svg';
-import '../App/App.css';
-import { loginUser, logoutUser } from '../../actions/users';
 import { Link } from 'react-router-dom';
-import LoginUser from '../Login';
-import NewUser from '../Register';
-import Logout from '../../components/Logout';
-import { Redirect } from 'react-router-dom';
+
+import './Header.css';
 
 class Header extends Component {
 
-
   constructor(props) {
     super(props);
-
-    this.state = {
-      showLogin : false,
-      showRegister : false,
-      redirect: false
-    };
-  }
-
-  handleLogout(event) {
-    event.preventDefault();
-    this.props.logoutUser();
-    this.setState({
-      showLogin: false,
-      redirect: true
-    })
-  }
-
-  showLogin() {
-    if(this.state.showLogin === true){
-      this.setState({
-        showLogin: false
-      })
-    }else{
-      this.setState({
-      showRegister : false,
-      showLogin : true
-      });
-    }
-  }
-
-  showRegister() {
-    if(this.state.showRegister === true){
-      this.setState({
-        showRegister: false
-      })
-    }else{
-      this.setState({
-        showLogin : false,
-        showRegister : true
-      });
-    }
-  }
-
-  handleXClick(event) {
-
   }
 
   render() {
-    if(this.state.redirect) {
-     return <Redirect to="/logout"/>
-    }
+    
     return (
-      <div className="App-header">
+      <div className="Header">
+
         <div className="Login-reg">
           <ul>
             <li><Link to={'/'}>Home</Link></li>
@@ -104,39 +52,19 @@ class Header extends Component {
         </div>
 
 
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="App-title">Consume More Stuff</h1>
+        <div className="banner"><img src='/banner.jpg' alt='' /></div>
+
       </div>
     );
 
   }
 
 }
-
-
-const mapStateToProps = (state) => {
-  return {
-    user: state.user
-  };
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    loginUser: () => {
-      dispatch(loginUser());
-    },
-    logoutUser: () => {
-      dispatch(logoutUser());
-    },
-    loginUser: () => {
-      dispatch(loginUser());
-    }
-  };
-}
+//end class
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+  null,
+  null
 )(Header);
 
 

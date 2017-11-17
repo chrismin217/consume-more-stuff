@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { loadUsers, addNewUser } from '../../actions/users';
 import { connect } from 'react-redux';
-import '../App/App.css';
+
+import './RegisterForm.css';
 
 class NewUser extends Component {
 

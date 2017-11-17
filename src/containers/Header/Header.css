@@ -1,0 +1,31 @@
+.Login-reg {
+  border: 1px solid green;
+  width: 25%;
+  position: absolute;
+  right: 0;
+}
+
+  .Login-reg ul {
+    margin: 0 auto;
+  }
+
+  .Login-reg-first {
+    border-left: 1px solid white;
+  }
+
+  .Login-reg li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px;
+    border-right: 1px solid white;
+  }
+
+  .Login-reg li a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .Login-reg li a:hover {
+    text-decoration: underline;
+    color: cyan;
+  }

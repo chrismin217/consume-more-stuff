@@ -1,13 +1,7 @@
-/*REACT ENTRY POINT*/
-/*REACT ENTRY POINT*/
-/*REACT ENTRY POINT*/
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-
 
 import {
   BrowserRouter as Router,
@@ -16,18 +10,21 @@ import {
 } from 'react-router-dom';
 
 import './index.css';
+import registerServiceWorker from './registerServiceWorker';
+
 import thunk from 'redux-thunk';
 import reducers from './reducers/reducer_index';
 
-import NewItemForm from './containers/NewItem/newItemForm';
+/*COMPONENTS FOR ROUTES*/
 import App from './containers/App/App';
-import registerServiceWorker from './registerServiceWorker';
+import NewItemForm from './containers/NewItem/newItemForm';
 import LoginUser from './containers/Login';
 import AuthUserEditItem from './containers/AuthUserEditItem';
 import MyItems from './containers/MyItems';
 import UserSettings from './containers/UserSettings';
 import CategoryView from './containers/CategoryView';
 import AllItems from './containers/AllItems';
+
 import Goodbye from './components/Goodbye';
 
 const store = createStore(
