@@ -17,8 +17,8 @@ import reducers from './reducers/reducer_index';
 
 /*COMPONENTS FOR ROUTES*/
 import App from './containers/App/App';
-
-import UserSettings from './containers/UserSettings';
+import LoginForm from './containers/LoginForm/LoginForm';
+import RegisterForm from './containers/RegisterForm/RegisterForm';
 
 const store = createStore(
   reducers,
@@ -32,6 +32,8 @@ ReactDOM.render(
     <Router>
       <div>
         <Route exact path='/' component={App}/>
+        <Route path='/login' component={LoginForm} />
+        <Route path='/register' component={RegisterForm} />
       </div>
     </Router>
   </Provider>,

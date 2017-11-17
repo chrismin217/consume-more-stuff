@@ -14,7 +14,7 @@ const Grid = ({ list }) => {
 
   return (
     <div className="Grid">
-      <h4>Grid</h4>
+      <span>Grid</span>
     </div>
   );
 

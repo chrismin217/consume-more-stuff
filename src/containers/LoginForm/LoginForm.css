@@ -1,11 +1,14 @@
 .Login-form {
+  border: 1px solid cyan;
   position: absolute;
-  right: 0;
-  top: 50px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
   .Login-form form {
-
+    border: 1px solid black;
   }
   .Login-form input {
     margin: 3px;
@@ -21,3 +24,7 @@
   .Login-form button:hover {
     background-color: #997500;
   }
+
+.label {
+  display: inline-block;
+}

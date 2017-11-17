@@ -6,16 +6,13 @@ import { LOGIN_USER,
 const initialState = {};
 
 const user = (state = initialState, action) => {
-  switch (action.type){
+  switch (action.type) {
 
     case LOGIN_USER:
-      console.log(action.user.id, 'reducer USER id');
       localStorage.setItem('user_id', action.user.id);
-      localStorage.setItem('logged_in', true);
       localStorage.setItem('username', action.user.username);
-      let test = localStorage.getItem('logged_in');
 
-      return Object.assign({}, state, {user_id: action.user.id, logged_in: true, username: action.user.username})
+      return Object.assign({}, state, {user_id: action.user.id, username: action.user.username})
 
     case LOGOUT_USER:
       localStorage.setItem('user_id', 0);

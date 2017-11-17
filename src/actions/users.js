@@ -33,10 +33,10 @@ export const addNewUser = (user) => {
 }
 
 export const loginUser = (user) => {
-  console.log('USER', user)
+  console.log('ACTION ===', user);
   return function(dispatch) {
-    return login(user).then(theUser => {
-      console.log(theUser, 'THEUSER')
+    return axios.post('/login').then(theUser => {
+      console.log('ACTION RETURN ===', theUser);
       dispatch({
         type: LOGIN_USER,
         user: theUser
@@ -47,7 +47,7 @@ export const loginUser = (user) => {
 
 export const logoutUser = () => {
   return function(dispatch) {
-    return logout().then(response => {
+    return axios.get('/logout').then(response => {
       dispatch({
         type: LOGOUT_USER,
         data: response

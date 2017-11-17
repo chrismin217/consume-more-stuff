@@ -34,10 +34,10 @@ class Filter extends Component {
   }
 
   render() {
-    console.log('Filter render');
+    console.log('Searchbar render');
     
     return (
-      <div className='Filter'>
+      <div className='Searchbar'>
 
         <div className="Price">
           <div className="Price-label"><span>Sort By Price</span></div>

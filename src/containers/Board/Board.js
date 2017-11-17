@@ -21,13 +21,12 @@ class Board extends Component {
     console.log('Board render');
 
     let items = this.props.items;
-    let filter = this.props.filter;
+    let filter = this.props.filter; //{ price : 1, category: 1, condition: 2}
 
     return (
       <div className="Board">
-        <h1>Board</h1>
         <Filter />
-        <Grid />
+        <Grid list={items} />
       </div>
     );
   }

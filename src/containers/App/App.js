@@ -28,12 +28,11 @@ class App extends Component {
 
   render() {
     console.log('App render');
-    console.log(this.state);
+    let items = this.props.initialItems;
     return (
       <div className="App">
         <Header />
-        <Board />
-        <Footer />
+        <Board list={items} />
       </div>
     );
   }

@@ -1,0 +1,72 @@
+.Searchbar {
+  background-color: green;
+  position: absolute;
+  left: 0;
+  top: 127px;
+  width: 15%;
+}
+  .Searchbar div {
+    color: black;
+  }
+  .Searchbar label {
+    font-size: 12px;
+  }
+
+
+.Price {
+  border: 1px solid black;
+  width: 90%;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+  .Price-label span {
+    color: blue;
+    font-size: 14px;
+  }
+  .Price select {
+    margin-bottom: 8px;
+    margin-top: 4px;
+  }
+
+.Category {
+   border: 1px solid black;
+   width: 90%;
+   margin-bottom: 8px;
+   margin-top: 8px;
+}
+  .Category-label span {
+    color: blue;
+    font-size: 14px;
+  }
+  .Category select {
+    margin-bottom: 8px;
+    margin-top: 4px;
+  }
+
+.Condition {
+  border: 1px solid black;
+  width: 90%;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+  .Condition-label span {
+    color: blue;
+    font-size: 14px;
+  }
+  .Condition select {
+    margin-bottom: 8px;
+    margin-top: 4px;
+  }
+
+.Search-button {
+
+}
+  .Search-button button {
+    font-weight: bold;
+    background-color: yellow;
+    border-radius: 5px;
+  }
+  .Search-button button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }

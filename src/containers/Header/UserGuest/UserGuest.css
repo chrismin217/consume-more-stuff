@@ -1,0 +1,69 @@
+.UserGuest {
+  border: 1px solid black;
+  background-color: magenta;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.Welcome {
+  font-size: 1.25em;
+}
+
+.Login-reg {
+  
+}
+
+  .Login-reg ul {
+    border: 1px solid black;
+    text-align: justify;
+  }
+
+  .Login-reg li {
+    list-style-type: none;
+    display: inline-block;
+    border: 1px solid cyan;
+    padding: 3px;
+    margin: 2px;
+  }
+
+  .Login-reg li a {
+    border: 1px solid yellow;
+    text-decoration: none;
+    color: white;
+  }
+
+  .Login-reg li a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: cyan;
+  }
+
+.Logout-myItems {
+  
+}
+
+  .Logout-myItems ul {
+    border: 1px solid black;
+    text-align: justify;
+  }
+
+  .Logout-myItems li {
+    list-style-type: none;
+    display: inline-block;
+    border: 1px solid cyan;
+    padding: 3px;
+    margin: 2px;
+  }
+
+  .Logout-myItems li a {
+    border: 1px solid yellow;
+    text-decoration: none;
+    color: white;
+  }
+
+  .Logout-myItems li a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: cyan;
+  }

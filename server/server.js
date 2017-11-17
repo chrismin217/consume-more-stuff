@@ -74,9 +74,9 @@ passport.use(new LocalStrategy(function (username, password, done) {
 
 app.post('/login', passport.authenticate('local'), function(req, res){
   const user = req.user;
-  console.log(user, 'SERVER ERROR')
-  res.json(req.user);
+  return res.json(req.user);
 });
+
 
 app.put('/users/:id/edit', (req,res) => {
   console.log(req.body, 'edit username route');
