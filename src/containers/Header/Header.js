@@ -58,21 +58,21 @@ class Header extends Component {
     return (
       <div className="App-header">
         <div className="Login-reg">
-          <ul>
-            <li><Link to={'/'}>Home</Link></li>
-            <li><Link to={'/all'}>All Items</Link></li>
 
-            <li>Welcome {localStorage.getItem('username')}</li>
+            <div><Link to={'/'}>Home</Link></div>
+            <div><Link to={'/all'}>All Items</Link></div>
+
+            <div>Welcome {localStorage.getItem('username')}</div>
             {!(this.props.user.logged_in) && localStorage.getItem('logged_in') !== 'true' ?
             <div>
-            <li><a href="#" onClick={this.showRegister.bind(this)}>Register</a></li>
+            <div><a href="#" onClick={this.showRegister.bind(this)}>Register</a></div>
             {this.state.showRegister === true ?
-            <NewUser />
+            <div><NewUser /></div>
             : null}
 
-            <li><a href="#" onClick={this.showLogin.bind(this)}>Login</a></li>
+            <div onClick={this.showLogin.bind(this)}>Login</div>
             {this.state.showLogin === true ?
-            <li><LoginUser /></li>
+            <div><LoginUser /></div>
             : null}
             </div>
             : null}
@@ -80,13 +80,12 @@ class Header extends Component {
 
             {this.props.user.logged_in === true || localStorage.getItem('logged_in') === 'true' ?
             <div>
-              <li><Link to={`/users/${localStorage.getItem('user_id')}/edit`}>Settings</Link></li>
-              <li><Link to={`/users/${localStorage.getItem('user_id')}/items`}>My Items</Link></li>
-              <li><Logout /> </li>
+              <div><Link to={`/users/${localStorage.getItem('user_id')}/edit`}>Settings</Link></div>
+              <div><Link to={`/users/${localStorage.getItem('user_id')}/items`}>My Items</Link></div>
+              <div><Logout /> </div>
             </div>
             : null }
 
-          </ul>
         </div>
 
 
